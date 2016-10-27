@@ -23,13 +23,13 @@ grad = zeros(size(theta));
 % recall again that y is the actual output
 % also recall that we do not regularize the first theta therefore we go 2:end
 
-J = 1/(2*m)*sum((X*theta-y).^2)+lambda/(2*m)*sum(theta(2:end).^2)
+J = 1/(2*m)*sum((X*theta-y).^2)+lambda/(2*m)*sum(theta(2:end).^2);
 
 % recalling that the initial theta is zero
 newtheta = theta;
 newtheta(1) = 0;
 
-grad = (1/m)*sum((X*theta-y).*X)+(lambda/m)*newtheta'
+grad = (1/m)*sum((X*theta-y).*X)+(lambda/m)*newtheta';
 
 
 
